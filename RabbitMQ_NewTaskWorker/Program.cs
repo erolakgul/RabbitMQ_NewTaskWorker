@@ -35,7 +35,7 @@ namespace RabbitMQ_NewTaskWorker
                     Console.WriteLine(" [x] Done");
 
                     //Message acknowledgment
-                    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false); 
 
                 };
                 channel.BasicConsume(queue: "task_queue",
